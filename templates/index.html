@@ -1,0 +1,20 @@
+<h1>🧠 AI Resume Ranker is Loaded</h1>
+
+<h2>Upload Resume & Job Description</h2>
+<form method="POST" enctype="multipart/form-data">
+    <label>Resume (PDF):</label><br>
+    <input type="file" name="resume"><br><br>
+
+    <label>Job Description (PDF):</label><br>
+    <input type="file" name="job"><br><br>
+
+    <label>Or Paste Job Description Text:</label><br>
+    <textarea name="job_text" rows="10" cols="60" placeholder="Paste the job description here..."></textarea><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+{% if result %}
+    <h3>AI Evaluation Result</h3>
+    <pre>{{ result }}</pre>
+{% endif %}
